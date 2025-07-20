@@ -1,27 +1,18 @@
 "use client";
 import Image from "next/image";
 import { imageSrc } from "./icons";
+import { useTranslation } from "react-i18next";
 
 export default function ToolsIcons() {
+  const { t } = useTranslation();
   return (
     <>
       <div>
-        <h1
-          className="text-white text-4xl p-4"
-          style={{
-            textShadow: `
-      0 1px 0 #00ffcc,
-      0 2px 0 #00ffcc,
-      0 3px 2px rgba(0, 255, 204, 0.5),
-      0 0 10px #00ffe0,
-      0 0 20px #00ffe0
-    `,
-          }}
-        >
-          Skills
+        <h1 className="text-4xl font-bold text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
+          {t("skills")}
         </h1>
       </div>
-      <div className="grid grid-cols-4 gap-10 place-items-center mx-auto w-fit">
+      <div className="grid grid-cols-4 gap-10 place-items-center mx-auto w-fit ">
         {imageSrc.map((src, index) => (
           <div
             key={index}

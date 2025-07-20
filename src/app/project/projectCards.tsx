@@ -20,13 +20,13 @@ export default function ProjectCard({ image, text, reverse }: props) {
   }, [inView]);
   return (
     <div
-      className={`flex justify-between items-center mt-[10%] gap-15 ${
+      className={`flex justify-between items-center mt-[10%] gap-15  ${
         reverse ? "flex-row-reverse" : ""
       }`}
       ref={ref}
     >
-      <div className="w-full text-center">
-        <p className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent leading-loose ">
+      <div className="w-full text-center ">
+        <p className="text-3xl text-[#A0E5DC] drop-shadow-[0_0_2px_#00c2a8] leading-loose ">
           {text}
         </p>
       </div>

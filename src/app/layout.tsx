@@ -2,6 +2,7 @@
 import "./globals.css";
 import React from "react";
 import { CssBaseline } from "@mui/material";
+import Footer from "./footer";
 
 export default function RootLayout({
   children,
@@ -10,10 +11,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen px-10">
-        <CssBaseline />
+      <body className="!bg-[#000000]  min-h-screen ">
+        <div className="px-10">
+          <CssBaseline />
+          {children}
+        </div>
+        <Footer />
       </body>
-      {children}
     </html>
   );
 }
