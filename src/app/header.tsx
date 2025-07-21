@@ -129,7 +129,13 @@ export default function Header() {
       </div>
 
       <div className="absolute top-6 left-6 w-12 h-12 z-50">
-        <Image src="/img/logo.png" alt="logo" fill className="rounded-full" />
+        <Image
+          src="/img/logo.png"
+          alt="logo"
+          fill
+          className="rounded-full"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
       </div>
 
       {/* Hero Content */}

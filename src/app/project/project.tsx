@@ -30,32 +30,18 @@ export default function Projects() {
     <>
       <div
         id="projects"
-        className="mt-10 py-10 px-2 dark:bg-gradient-to-b dark:from-[#001f1f] dark:via-[#000000] dark:to-[#001f1f] backdrop-blur-md dark:bg-white/5 dark:border dark:border-white/10 rounded-xl border border-[#3e3c3c] bg-gradient-to-r from-[#e0f7fa] via-[#f5fdff] to-[#ffffff]"
+        className="mt-10 py-10 px-4 sm:px-6 md:px-8 dark:bg-gradient-to-b dark:from-[#001f1f] dark:via-[#000000] dark:to-[#001f1f] backdrop-blur-md dark:bg-white/5 dark:border dark:border-white/10 rounded-xl border border-[#3e3c3c] bg-gradient-to-r from-[#e0f7fa] via-[#f5fdff] to-[#ffffff]"
       >
-        <div className="flex justify-between">
-          <h1 className="text-4xl font-bold dark:text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <h1 className="text-3xl sm:text-4xl font-bold dark:text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
             {`${t("project")}(imdb)`}
           </h1>
-          <button
-            className="
-          bg-gradient-to-r from-green-400 via-emerald-500 to-teal-300
-          rounded-2xl
-      transition-transform
-      duration-500
-      ease-in-out
-      hover:-translate-y-2
-      hover:translate-x-2
-      hover:scale-105
-      drop-shadow-lg
-      hover:drop-shadow-green-300
-    
-    "
-          >
+          <button className="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-300 rounded-2xl transition-transform duration-500 ease-in-out hover:-translate-y-2 hover:translate-x-2 hover:scale-105 drop-shadow-lg hover:drop-shadow-green-300">
             <a
               href="https://github.com/mojitaher/IMDB"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white text-4xl p-4 flex items-center gap-2"
+              className="text-white text-2xl sm:text-4xl p-4 flex items-center gap-2"
             >
               <GithubIcon size={30} />
               github
@@ -68,31 +54,18 @@ export default function Projects() {
         <ProjectCard image={img3} text={text3} reverse={false} />
         <ProjectCard image={img4} text={text4} reverse={true} />
       </div>
-      <div className="mt-10 py-10 px-2 dark:bg-gradient-to-b dark:from-[#001f1f] dark:via-[#000000] dark:to-[#001f1f] backdrop-blur-md dark:bg-white/5 dark:border dark:border-white/10 rounded-xl border border-[#3e3c3c] bg-gradient-to-r from-[#e0f7fa] via-[#f5fdff] to-[#ffffff]">
-        <div className="flex justify-between">
-          <h1 className="text-4xl font-bold dark:text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
+
+      <div className="mt-10 py-10 px-4 sm:px-6 md:px-8 dark:bg-gradient-to-b dark:from-[#001f1f] dark:via-[#000000] dark:to-[#001f1f] backdrop-blur-md dark:bg-white/5 dark:border dark:border-white/10 rounded-xl border border-[#3e3c3c] bg-gradient-to-r from-[#e0f7fa] via-[#f5fdff] to-[#ffffff]">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <h1 className="text-3xl sm:text-4xl font-bold dark:text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
             {`${t("project")}(hack)`}
           </h1>
-          <button
-            className="
-          bg-gradient-to-r from-green-400 via-emerald-500 to-teal-300
-          rounded-2xl
-      transition-transform
-      duration-500
-      ease-in-out
-      hover:-translate-y-2
-      hover:translate-x-2
-      hover:scale-105
-      drop-shadow-lg
-      hover:drop-shadow-green-300
-    
-    "
-          >
+          <button className="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-300 rounded-2xl transition-transform duration-500 ease-in-out hover:-translate-y-2 hover:translate-x-2 hover:scale-105 drop-shadow-lg hover:drop-shadow-green-300">
             <a
               href="https://github.com/mojitaher/hacker"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white text-4xl p-4 flex items-center gap-2"
+              className="text-white text-2xl sm:text-4xl p-4 flex items-center gap-2"
             >
               <GithubIcon size={30} />
               github
@@ -105,25 +78,30 @@ export default function Projects() {
         <ProjectCard image={hack3} text={hackText3} reverse={false} />
         <ProjectCard image={hack4} text={hackText4} reverse={true} />
       </div>
-      <div className="mt-10 py-10">
-        <h2 className="text-4xl font-bold dark:text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
+
+      <div className="mt-10 py-10 px-4 sm:px-6 md:px-8">
+        <h2 className="text-3xl sm:text-4xl font-bold dark:text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
           {`${t("upcomming")}(todolist ,marketing)`}
         </h2>
-        <div className="flex justify-center items-center mt-10 gap-[10%] ">
-          <Image
-            src={demo}
-            alt="demo"
-            width={400}
-            height={300}
-            className=" rounded-3xl shadow-orange-300 dark:shadow-[#00ffcc] shadow-xl"
-          />
-          <Image
-            src={demo2}
-            alt="demo"
-            width={400}
-            height={300}
-            className=" rounded-3xl shadow-orange-300 dark:shadow-[#00ffcc]  shadow-xl"
-          />
+        <div className=" flex flex-col md:flex-row justify-center items-center mt-10 gap-8 md:gap-[10%]">
+          <div className="relative w-[400px] h-[300px]">
+            <Image
+              src={demo}
+              alt="demo"
+              fill
+              sizes="(max-width: 768px) 100vw, 400px"
+              className="object-cover rounded-3xl shadow-orange-300 dark:shadow-[#00ffcc] shadow-xl"
+            />
+          </div>
+          <div className="relative w-[400px] h-[300px]">
+            <Image
+              src={demo2}
+              alt="demo"
+              fill
+              sizes="(max-width: 768px) 100vw, 400px"
+              className="object-cover rounded-3xl shadow-orange-300 dark:shadow-[#00ffcc] shadow-xl"
+            />
+          </div>
         </div>
       </div>
     </>
