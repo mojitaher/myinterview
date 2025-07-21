@@ -71,7 +71,7 @@ export default function Header() {
       </List>
     </Box>
   );
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme()!;
 
   return (
     <header className="relative w-full min-h-screen bg-[#e8f0f7] text-[#00e6d9] overflow-hidden flex flex-col justify-center px-6 md:px-20 dark:bg-black dark:text-white">
