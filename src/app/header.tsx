@@ -16,7 +16,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import WorkIcon from "@mui/icons-material/Work";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import Link from "next/link";
-import { LanguagesIcon, MoonIcon, SunIcon } from "lucide-react";
+import { File, LanguagesIcon, MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "./context/theme";
 
 export default function Header() {
@@ -30,7 +30,7 @@ export default function Header() {
     setOpen(newOpen);
   };
   const menuItems = [
-    { text: t("menuHome"), icon: <HomeIcon />, link: "#" },
+    { text: t("myresume"), icon: <File />, link: "/resume" },
     { text: t("menuAbout"), icon: <InfoIcon />, link: "#about" },
     { text: t("menuResume"), icon: <WorkIcon />, link: "#projects" },
     { text: t("menuContact"), icon: <ContactMailIcon />, link: "#contact" },
@@ -75,18 +75,6 @@ export default function Header() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    //     <div className="max-w-sm w-full rounded-3xl bg-[#d6f5f8] shadow-[0_0_40px_#00e6d955] p-6">
-    //       <Image
-    //         src="/img/headerimg.png"
-    //         alt="avatar"
-    //         width={450}
-    //         height={450}
-    //         className="rounded-3xl"
-    //         priority
-    //       />
-    //     </div>
-    //   </div>
-    // </header>
     <header className="relative w-full min-h-screen bg-[#e8f0f7] text-[#00e6d9] overflow-hidden flex flex-col justify-center px-6 md:px-20 dark:bg-black dark:text-white">
       <div className="absolute top-5 right-25 ">
         <button
@@ -149,7 +137,7 @@ export default function Header() {
           </p>
           <div className="flex gap-4 justify-center md:justify-start">
             <a
-              href="/MojtabaTaherkhani_CV.pdf"
+              href="/myresume.pdf"
               download
               className="px-6 py-2 rounded-full border border-[#00ffcc] text-[#00ffcc] hover:bg-[#00ffcc22] hover:shadow-[0_0_10px_#00ffcc] transition"
             >
