@@ -13,6 +13,7 @@
     --foreground: #ededed;
   }
 }
+@custom-variant dark (&:where(.dark, .dark *));
 
 @keyframes fadeInDrawer {
   from {

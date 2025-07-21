@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="w-full bg-gradient-to-r from-[#00ffcc1a] via-[#0066ff11] to-[#00000022] backdrop-blur-2xl backdrop-saturate-150 border-t border-[#00ffcc33] text-white py-8 mt-20 shadow-[0_0_20px_#00ffcc66]"
+      className="w-full dark:bg-gradient-to-r dark:from-[#00ffcc1a] dark:via-[#0066ff11] dark:to-[#00000022] dark:backdrop-blur-2xl dark:backdrop-saturate-150 dark:border-t dark:border-[#00ffcc33] dark:text-white  dark:shadow-[0_0_20px_#00ffcc66]  bg-gradient-to-r from-[#e0f7fa] via-[#f5ffff] to-[#ffffff] border-t border-[#00e6d955] text-[#007c91] py-10 mt-20 shadow-[0_0_20px_#00e6d955]"
     >
       <div className="mx-auto flex flex-col md:flex-row items-start justify-between px-6 gap-10">
         <div className="text-center md:text-left flex flex-col gap-4">
@@ -15,17 +15,17 @@ export default function Footer() {
             <p>{t("Phone")} :</p>
             <a
               href="tel:+989034155124"
-              className="hover:text-[#00ffcc] hover:drop-shadow-[0_0_5px_#00ffcc] transition"
+              className="dark:hover:text-[#00ffcc] dark:hover:drop-shadow-[0_0_5px_#00ffcc] transition text-[#00e6d9] hover:drop-shadow-[0_0_6px_#00ffcc] hover:text-[#034642]"
             >
               09034155124
             </a>
           </span>
         </div>
 
-        <div className="flex flex-col items-center md:items-end gap-3 text-white/70">
+        <div className="flex flex-col items-center md:items-end gap-3 dark:text-white/70">
           {socials.map((app, index) => (
             <div
-              className="flex items-center gap-2 hover:text-[#00ffcc] hover:drop-shadow-[0_0_6px_#00ffcc] transition-all"
+              className="flex items-center gap-2 dark:hover:text-[#00ffcc] dark:hover:drop-shadow-[0_0_6px_#00ffcc]  text-[#00e6d9] hover:drop-shadow-[0_0_6px_#00ffcc] hover:text-[#034642]  "
               key={index}
             >
               {app.svg}

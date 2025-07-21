@@ -16,7 +16,8 @@ import InfoIcon from "@mui/icons-material/Info";
 import WorkIcon from "@mui/icons-material/Work";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import Link from "next/link";
-import { LanguagesIcon } from "lucide-react";
+import { LanguagesIcon, MoonIcon, SunIcon } from "lucide-react";
+import { useTheme } from "./context/theme";
 
 export default function Header() {
   const [open, setOpen] = useState<boolean>(false);
@@ -71,16 +72,37 @@ export default function Header() {
       </List>
     </Box>
   );
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="relative w-full min-h-screen bg-black text-white overflow-hidden flex flex-col justify-center px-6 md:px-20">
+    //     <div className="max-w-sm w-full rounded-3xl bg-[#d6f5f8] shadow-[0_0_40px_#00e6d955] p-6">
+    //       <Image
+    //         src="/img/headerimg.png"
+    //         alt="avatar"
+    //         width={450}
+    //         height={450}
+    //         className="rounded-3xl"
+    //         priority
+    //       />
+    //     </div>
+    //   </div>
+    // </header>
+    <header className="relative w-full min-h-screen bg-[#e8f0f7] text-[#00e6d9] overflow-hidden flex flex-col justify-center px-6 md:px-20 dark:bg-black dark:text-white">
       <div className="absolute top-5 right-25 ">
         <button
           onClick={() => toggleLang()}
-          className="flex items-center gap-4 px-3 py-1 rounded-xl text-[#00ffc3] border border-[#00ffc3] hover:bg-[#00ffc311] hover:shadow-[0_0_10px_#00ffc3] transition-all duration-300"
+          className="flex items-center gap-4 px-3 py-1 rounded-xl dark:bg-transparent bg-gray-300 border border-[#00e6d9] text-[#00e6d9] hover:bg-[#00e6d922] hover:shadow-[0_0_15px_#00e6d9] transition-all duration-300 "
         >
           <LanguagesIcon fontSize="small" />
           {i18n.language === "fa" ? "EN" : "FA"}
+        </button>
+      </div>
+      <div className="absolute top-5 left-25">
+        <button
+          onClick={toggleTheme}
+          className="flex items-center gap-2 px-4 py-1 rounded-xl dark:bg-transparent bg-gray-200 border border-[#00e6d9] text-[#00e6d9] hover:bg-[#00e6d922] hover:shadow-[0_0_15px_#00e6d9] transition-all duration-300 select-none"
+        >
+          {theme === "dark" ? <SunIcon /> : <MoonIcon />}
         </button>
       </div>
       <div className="absolute top-6 right-6 ">
@@ -113,10 +135,10 @@ export default function Header() {
       {/* Hero Content */}
       <div className="flex flex-col md:flex-row items-center gap-10">
         <div className="text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold text-[#00ffcc] drop-shadow-[0_0_15px_#00ffcc] mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold dark:text-[#00ffcc]  dark:drop-shadow-[0_0_15px_#00ffcc]  text-gray-600 drop-shadow-[0_0_25px_#00e6d9cc] mb-4">
             {t("intro")}
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-lg leading-relaxed mb-6">
+          <p className="text-lg md:text-xl dark:text-gray-300 text-[#6a65ff] max-w-lg leading-relaxed mb-6">
             {t("greeting")}
           </p>
           <div className="flex gap-4 justify-center md:justify-start">
@@ -136,13 +158,13 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="max-w-sm w-full">
+        <div className="bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-[#00e6d955] shadow-[0_0_30px_#00e6d988] max-w-sm mx-auto transition-all duration-300">
           <Image
             src="/img/headerimg.png"
             alt="avatar"
-            width={500}
-            height={500}
-            className="rounded-2xl shadow-[0_0_20px_#00ffcc55]"
+            width={450}
+            height={450}
+            className="rounded-2xl bg-black/100 border border-[#00e6d9] shadow-[0_0_20px_#00e6d955]"
             priority
           />
         </div>

@@ -8,7 +8,7 @@ export default function ToolsIcons() {
   return (
     <>
       <div>
-        <h1 className="text-4xl font-bold text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
+        <h1 className="text-4xl font-bold text-gray-600 dark:text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
           {t("skills")}
         </h1>
       </div>

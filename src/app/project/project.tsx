@@ -30,10 +30,10 @@ export default function Projects() {
     <>
       <div
         id="projects"
-        className="mt-10 py-10 px-2 bg-gradient-to-b from-[#001f1f] via-[#000000] to-[#001f1f] backdrop-blur-md bg-white/5 border border-white/10 rounded-xl "
+        className="mt-10 py-10 px-2 dark:bg-gradient-to-b dark:from-[#001f1f] dark:via-[#000000] dark:to-[#001f1f] backdrop-blur-md dark:bg-white/5 dark:border dark:border-white/10 rounded-xl border border-[#3e3c3c] bg-gradient-to-r from-[#e0f7fa] via-[#f5fdff] to-[#ffffff]"
       >
         <div className="flex justify-between">
-          <h1 className="text-4xl font-bold text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
+          <h1 className="text-4xl font-bold dark:text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
             {`${t("project")}(imdb)`}
           </h1>
           <button
@@ -68,9 +68,9 @@ export default function Projects() {
         <ProjectCard image={img3} text={text3} reverse={false} />
         <ProjectCard image={img4} text={text4} reverse={true} />
       </div>
-      <div className="mt-10 py-10 px-2 bg-gradient-to-b from-[#001f1f] via-[#000000] to-[#001f1f] backdrop-blur-md bg-white/5 border border-white/10 rounded-xl">
+      <div className="mt-10 py-10 px-2 dark:bg-gradient-to-b dark:from-[#001f1f] dark:via-[#000000] dark:to-[#001f1f] backdrop-blur-md dark:bg-white/5 dark:border dark:border-white/10 rounded-xl border border-[#3e3c3c] bg-gradient-to-r from-[#e0f7fa] via-[#f5fdff] to-[#ffffff]">
         <div className="flex justify-between">
-          <h1 className="text-4xl font-bold text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
+          <h1 className="text-4xl font-bold dark:text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
             {`${t("project")}(hack)`}
           </h1>
           <button
@@ -106,7 +106,7 @@ export default function Projects() {
         <ProjectCard image={hack4} text={hackText4} reverse={true} />
       </div>
       <div className="mt-10 py-10">
-        <h2 className="text-4xl font-bold text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
+        <h2 className="text-4xl font-bold dark:text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
           {`${t("upcomming")}(todolist ,marketing)`}
         </h2>
         <div className="flex justify-center items-center mt-10 gap-[10%] ">
@@ -115,14 +115,14 @@ export default function Projects() {
             alt="demo"
             width={400}
             height={300}
-            className=" rounded-3xl shadow-orange-300 shadow-xl"
+            className=" rounded-3xl shadow-orange-300 dark:shadow-[#00ffcc] shadow-xl"
           />
           <Image
             src={demo2}
             alt="demo"
             width={400}
             height={300}
-            className=" rounded-3xl shadow-orange-300 shadow-xl"
+            className=" rounded-3xl shadow-orange-300 dark:shadow-[#00ffcc]  shadow-xl"
           />
         </div>
       </div>

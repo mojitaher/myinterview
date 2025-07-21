@@ -26,7 +26,7 @@ export default function ProjectCard({ image, text, reverse }: props) {
       ref={ref}
     >
       <div className="w-full text-center ">
-        <p className="text-3xl text-[#A0E5DC] drop-shadow-[0_0_2px_#00c2a8] leading-loose ">
+        <p className="text-3xl dark:text-[#A0E5DC] text-[#444b52] drop-shadow-[0_0_2px_#00c2a8] leading-loose ">
           {text}
         </p>
       </div>
