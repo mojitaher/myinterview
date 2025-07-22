@@ -1,3 +1,4 @@
+"use client";
 import { createContext, ReactNode, useContext, useState } from "react";
 type theme = "dark" | "light";
 type themeContextType = {
@@ -25,6 +26,5 @@ export const ThemeProvider = ({ children }: themeProps) => {
 };
 export const useTheme = () => {
   const context = useContext(themeContext);
-  // if (!themeContext) return null;
   return context;
 };
