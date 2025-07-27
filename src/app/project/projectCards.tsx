@@ -21,12 +21,12 @@ export default function ProjectCard({ image, text, reverse }: props) {
   return (
     <div
       className={`flex justify-between items-center mt-[10%] gap-15 sm:flex-col  ${
-        reverse ? "flex-row-reverse" : ""
+        reverse ? "lg:flex-row-reverse" : "lg:flex-row"
       }`}
       ref={ref}
     >
       <div className="w-full text-center ">
-        <p className="text-3xl dark:text-[#A0E5DC] text-[#444b52] drop-shadow-[0_0_2px_#00c2a8] leading-loose sm:text-2xl ">
+        <p className="lg:text-3xl dark:text-[#A0E5DC] text-[#444b52] drop-shadow-[0_0_2px_#00c2a8] leading-loose sm:text-2xl ">
           {text}
         </p>
       </div>

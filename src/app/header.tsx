@@ -126,7 +126,7 @@ export default function Header() {
       </div>
 
       {/* Hero Content */}
-      <div className="flex flex-col md:flex-row items-center gap-10 sm:flex-row sm:px-4">
+      <div className="flex flex-col md:flex-row items-center gap-10 sm:flex-row ">
         <div className="text-center md:text-left sm:text-left">
           <h1 className="text-4xl md:text-6xl font-bold sm:text-2xl dark:text-[#00ffcc]  dark:drop-shadow-[0_0_15px_#00ffcc]  text-gray-600 drop-shadow-[0_0_25px_#00e6d9cc] mb-4">
             {t("intro")}
@@ -138,13 +138,13 @@ export default function Header() {
             <a
               href="/myresume.pdf"
               download
-              className="px-6 py-2 rounded-full border border-[#00ffcc] text-[#00ffcc] hover:bg-[#00ffcc22] hover:shadow-[0_0_10px_#00ffcc] transition sm:text-xs sm:py-4 sm:rounded-2xl"
+              className="lg:px-6 lg:py-3 lg:rounded-full lg:text-base border border-[#00ffcc] text-[#00ffcc] hover:bg-[#00ffcc22] hover:shadow-[0_0_10px_#00ffcc] transition sm:text-xs sm:py-4 sm:rounded-2xl"
             >
               {t("Cv")}
             </a>
             <Link
               href="#contact"
-              className="px-6 py-2 rounded-full bg-[#00ffcc] text-black hover:bg-[#00e6b8] transition sm:text-xs sm:py-4 sm:rounded-2xl"
+              className="lg:px-6 lg:py-3 lg:rounded-full lg:text-base bg-[#00ffcc] text-black hover:bg-[#00e6b8] transition sm:text-xs sm:py-4 sm:rounded-2xl"
             >
               {t("Contact")}
             </Link>
@@ -157,7 +157,7 @@ export default function Header() {
             alt="avatar"
             width={450}
             height={450}
-            className="rounded-2xl bg-black/100 border border-[#00e6d9] shadow-[0_0_20px_#00e6d955] sm:max-w-[150px]"
+            className="rounded-2xl bg-black/100 border border-[#00e6d9] shadow-[0_0_20px_#00e6d955] sm:max-w-[150px] lg:max-w-full"
             priority
           />
         </div>

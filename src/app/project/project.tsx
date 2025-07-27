@@ -80,7 +80,7 @@ export default function Projects() {
       </div>
 
       <div className="mt-10 py-10 px-4 sm:px-6 md:px-8">
-        <h2 className="text-3xl sm:text-2xl font-bold dark:text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
+        <h2 className="lg:text-4xl sm:text-2xl font-bold dark:text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
           {`${t("upcomming")}(todolist ,marketing)`}
         </h2>
         <div className=" flex flex-col md:flex-row justify-center items-center mt-10 gap-8 md:gap-[10%] ">
