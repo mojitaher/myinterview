@@ -75,7 +75,7 @@ export default function Header() {
 
   return (
     <header className="relative w-full min-h-screen bg-[#e8f0f7] text-[#00e6d9] overflow-hidden flex flex-col justify-center px-6 md:px-20 dark:bg-black dark:text-white">
-      <div className="absolute top-5 right-25 ">
+      <div className="absolute top-5 right-25 sm:right-15 ">
         <button
           onClick={() => toggleLang()}
           className="flex items-center gap-4 px-3 py-1 rounded-xl dark:bg-transparent bg-gray-300 border border-[#00e6d9] text-[#00e6d9] hover:bg-[#00e6d922] hover:shadow-[0_0_15px_#00e6d9] transition-all duration-300 "
@@ -92,7 +92,7 @@ export default function Header() {
           {theme === "dark" ? <SunIcon /> : <MoonIcon />}
         </button>
       </div>
-      <div className="absolute top-6 right-6 ">
+      <div className="absolute top-6 right-6 sm:right-0 ">
         <button onClick={toggleDrawer(true)}>
           <MenuIcon sx={{ fontSize: 30, color: "#00ffcc" }} />
         </button>
@@ -126,25 +126,25 @@ export default function Header() {
       </div>
 
       {/* Hero Content */}
-      <div className="flex flex-col md:flex-row items-center gap-10">
-        <div className="text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold dark:text-[#00ffcc]  dark:drop-shadow-[0_0_15px_#00ffcc]  text-gray-600 drop-shadow-[0_0_25px_#00e6d9cc] mb-4">
+      <div className="flex flex-col md:flex-row items-center gap-10 sm:flex-row sm:px-4">
+        <div className="text-center md:text-left sm:text-left">
+          <h1 className="text-4xl md:text-6xl font-bold sm:text-2xl dark:text-[#00ffcc]  dark:drop-shadow-[0_0_15px_#00ffcc]  text-gray-600 drop-shadow-[0_0_25px_#00e6d9cc] mb-4">
             {t("intro")}
           </h1>
-          <p className="text-lg md:text-xl dark:text-gray-300 text-[#6a65ff] max-w-lg leading-relaxed mb-6">
+          <p className="text-lg md:text-xl sm:text-sm dark:text-gray-300 text-[#6a65ff] max-w-lg leading-relaxed mb-6">
             {t("greeting")}
           </p>
           <div className="flex gap-4 justify-center md:justify-start">
             <a
               href="/myresume.pdf"
               download
-              className="px-6 py-2 rounded-full border border-[#00ffcc] text-[#00ffcc] hover:bg-[#00ffcc22] hover:shadow-[0_0_10px_#00ffcc] transition"
+              className="px-6 py-2 rounded-full border border-[#00ffcc] text-[#00ffcc] hover:bg-[#00ffcc22] hover:shadow-[0_0_10px_#00ffcc] transition sm:text-xs sm:py-4 sm:rounded-2xl"
             >
               {t("Cv")}
             </a>
             <Link
               href="#contact"
-              className="px-6 py-2 rounded-full bg-[#00ffcc] text-black hover:bg-[#00e6b8] transition"
+              className="px-6 py-2 rounded-full bg-[#00ffcc] text-black hover:bg-[#00e6b8] transition sm:text-xs sm:py-4 sm:rounded-2xl"
             >
               {t("Contact")}
             </Link>
@@ -157,7 +157,7 @@ export default function Header() {
             alt="avatar"
             width={450}
             height={450}
-            className="rounded-2xl bg-black/100 border border-[#00e6d9] shadow-[0_0_20px_#00e6d955]"
+            className="rounded-2xl bg-black/100 border border-[#00e6d9] shadow-[0_0_20px_#00e6d955] sm:max-w-[150px]"
             priority
           />
         </div>

@@ -55,8 +55,8 @@ export default function Projects() {
         <ProjectCard image={img4} text={text4} reverse={true} />
       </div>
 
-      <div className="mt-10 py-10 px-4 sm:px-6 md:px-8 dark:bg-gradient-to-b dark:from-[#001f1f] dark:via-[#000000] dark:to-[#001f1f] backdrop-blur-md dark:bg-white/5 dark:border dark:border-white/10 rounded-xl border border-[#3e3c3c] bg-gradient-to-r from-[#e0f7fa] via-[#f5fdff] to-[#ffffff]">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+      <div className="mt-10 py-10 px-4 sm:px-6  md:px-8 dark:bg-gradient-to-b dark:from-[#001f1f] dark:via-[#000000] dark:to-[#001f1f] backdrop-blur-md dark:bg-white/5 dark:border dark:border-white/10 rounded-xl border border-[#3e3c3c] bg-gradient-to-r from-[#e0f7fa] via-[#f5fdff] to-[#ffffff]">
+        <div className="flex flex-col md:flex-row justify-between items-center ">
           <h1 className="text-3xl sm:text-4xl font-bold dark:text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
             {`${t("project")}(hack)`}
           </h1>
@@ -80,10 +80,10 @@ export default function Projects() {
       </div>
 
       <div className="mt-10 py-10 px-4 sm:px-6 md:px-8">
-        <h2 className="text-3xl sm:text-4xl font-bold dark:text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
+        <h2 className="text-3xl sm:text-2xl font-bold dark:text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
           {`${t("upcomming")}(todolist ,marketing)`}
         </h2>
-        <div className=" flex flex-col md:flex-row justify-center items-center mt-10 gap-8 md:gap-[10%]">
+        <div className=" flex flex-col md:flex-row justify-center items-center mt-10 gap-8 md:gap-[10%] ">
           <div className="relative w-[400px] h-[300px]">
             <Image
               src={demo}
