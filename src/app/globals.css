@@ -28,3 +28,26 @@
 html {
   scroll-behavior: smooth;
 }
+.text-neon-green {
+  text-shadow: 0 0 2px #66ff66, 0 0 6px #33ff99;
+}
+.border-neon-green {
+  border-color: #66ff66;
+}
+
+.bg-neon-green {
+  background-color: #66ff66;
+}
+
+.hover\:bg-neon-green:hover {
+  background-color: #66ff66;
+}
+
+.neon-glow {
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14,
+    0 0 40px #39ff14;
+}
+
+.neon-glow-soft {
+  text-shadow: 0 0 3px #80ff80, 0 0 6px #80ff80, 0 0 10px #80ff80;
+}

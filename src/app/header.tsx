@@ -29,7 +29,7 @@ export default function Header() {
     setOpen(newOpen);
   };
   const menuItems = [
-    { text: t("myresume"), icon: <File />, link: "/resume" },
+    { text: t("myresume"), icon: <File />, link: "/Resume" },
     { text: t("menuAbout"), icon: <InfoIcon />, link: "#about" },
     { text: t("menuResume"), icon: <WorkIcon />, link: "#projects" },
     { text: t("menuContact"), icon: <ContactMailIcon />, link: "#contact" },
