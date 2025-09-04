@@ -26,25 +26,37 @@ export default function ProjectSilder() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
-  const autoplayRef = useRef<NodeJS.Timer | null>(null);
+  const autoplayRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
   useEffect(() => {
     if (!emblaApi) return;
+
     const onselect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
     emblaApi.on("select", onselect);
     onselect();
+
+    return () => {
+      emblaApi.off("select", onselect); // پاکسازی event listener
+    };
   }, [emblaApi]);
 
   const startAutoplay = useCallback(() => {
+    if (typeof window === "undefined") return; // فقط سمت کلاینت
     if (!emblaApi) return;
+
     if (autoplayRef.current) clearInterval(autoplayRef.current);
+
     autoplayRef.current = setInterval(() => {
       emblaApi.scrollNext();
     }, 3000);
   }, [emblaApi]);
+
   const stopAutoplay = useCallback(() => {
     if (autoplayRef.current) clearInterval(autoplayRef.current);
   }, []);
+
   useEffect(() => {
+    if (typeof window === "undefined") return; // فقط سمت کلاینت
     startAutoplay();
     return () => stopAutoplay();
   }, [emblaApi]);
