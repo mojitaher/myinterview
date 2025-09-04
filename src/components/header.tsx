@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import "./118.n/i18n";
+import "../app/118.n/i18n";
 import {
   Box,
   Drawer,
@@ -16,7 +16,7 @@ import WorkIcon from "@mui/icons-material/Work";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import Link from "next/link";
 import { File, LanguagesIcon, MoonIcon, SunIcon } from "lucide-react";
-import { useTheme } from "./context/theme";
+import { useTheme } from "../app/context/theme";
 
 export default function Header() {
   const [open, setOpen] = useState<boolean>(false);

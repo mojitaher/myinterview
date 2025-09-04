@@ -1,6 +1,6 @@
-import Image from "next/image";
-import avatar from "../../public/img/avatar.png";
+import Lottie from "lottie-react";
 import { useTranslation } from "react-i18next";
+import programAnimation from "@/animation/Programming Computer.json";
 
 export default function Aboutme() {
   const { t } = useTranslation();
@@ -13,13 +13,14 @@ export default function Aboutme() {
         <p className="text-4xl font-bold text-[#444b52] leading-normal  ">
           {t("Aboutme")}
         </p>
-        <Image
-          src={avatar}
-          alt="avatar"
-          width={500}
-          height={500}
-          className=" bg-gradient-to-r from-[#00D1FF99] via-[#0066FF99] to-[#00113399] rounded-l-full "
-        />
+
+        <div className="w-[500px] h-[500px] bg-gradient-to-r from-[#00D1FF99] via-[#0066FF99] to-[#00113399] rounded-l-full ">
+          <Lottie
+            animationData={programAnimation}
+            loop
+            className="w-[500px] h-[500px]"
+          />
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { socials } from "./social/links";
+import { socials } from "../social/links";
 import { useTranslation } from "react-i18next";
 export default function Footer() {
   const { t } = useTranslation();

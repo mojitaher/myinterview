@@ -1,7 +1,8 @@
 "use client";
+import ProjectSilder from "@/components/slider";
 import ToolsIcons from "../../public/svg/toolIcons";
-import Aboutme from "./aboutme";
-import Header from "./header";
+import Aboutme from "../components/aboutme";
+import Header from "../components/header";
 import Projects from "./project/project";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
       <Aboutme />
       <ToolsIcons />
+      <ProjectSilder />
       <Projects />
     </>
   );

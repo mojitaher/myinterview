@@ -1,7 +1,7 @@
 "use client";
 import "./globals.css";
 import React from "react";
-import Footer from "./footer";
+import Footer from "../components/footer";
 import { ThemeProvider } from "./context/theme";
 
 export default function RootLayout({
