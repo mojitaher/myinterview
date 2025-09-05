@@ -36,12 +36,12 @@ export default function ProjectSilder() {
     onselect();
 
     return () => {
-      emblaApi.off("select", onselect); // پاکسازی event listener
+      emblaApi.off("select", onselect);
     };
   }, [emblaApi]);
 
   const startAutoplay = useCallback(() => {
-    if (typeof window === "undefined") return; // فقط سمت کلاینت
+    if (typeof window === "undefined") return;
     if (!emblaApi) return;
 
     if (autoplayRef.current) clearInterval(autoplayRef.current);
@@ -56,7 +56,7 @@ export default function ProjectSilder() {
   }, []);
 
   useEffect(() => {
-    if (typeof window === "undefined") return; // فقط سمت کلاینت
+    if (typeof window === "undefined") return;
     startAutoplay();
     return () => stopAutoplay();
   }, [emblaApi]);
@@ -96,7 +96,7 @@ export default function ProjectSilder() {
         {slides.map((_, i) => (
           <button
             key={i}
-            onClick={() => emblaApi.scrollTo(i)}
+            onClick={() => emblaApi?.scrollTo(i)}
             className={`w-3 h-3 rounded-full  hover:bg-white ${
               i == selectedIndex ? "bg-blue-400" : "bg-white/50"
             } transition`}
