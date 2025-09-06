@@ -5,24 +5,31 @@ import projectImg2 from "../../public/img/hack (1).png";
 import projectImg3 from "../../public/img/project (1).png";
 import capsoul from "../../public/img/capsoul1 (3).png";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
-const slides = [
-  { id: 1, img: capsoul, title: "Skill Capsoul" },
-  {
-    id: 2,
-    img: projectImg,
-    title: "Weather Page",
-    text: "Responsive Weather Website",
-  },
-  { id: 3, img: projectImg2, title: "Hack project", text: "Dashbord UI" },
-  {
-    id: 4,
-    img: projectImg3,
-    title: "IMDB Website",
-    text: "Website With InfinityScroll and IMDB Films",
-  },
-];
 export default function ProjectSilder() {
+  const { t } = useTranslation();
+  const slides = [
+    { id: 1, img: capsoul, title: t("slidertitle1") },
+    {
+      id: 2,
+      img: projectImg,
+      title: t("slidertitle2"),
+      text: t("sliderTxtWeather"),
+    },
+    {
+      id: 3,
+      img: projectImg2,
+      title: t("slidertitle3"),
+      text: t("sliderTxtHack"),
+    },
+    {
+      id: 4,
+      img: projectImg3,
+      title: t("slidertitle4"),
+      text: t("sliderTxtIMDB"),
+    },
+  ];
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
@@ -61,7 +68,7 @@ export default function ProjectSilder() {
     return () => stopAutoplay();
   }, [emblaApi]);
   return (
-    <div className="w-full flex flex-col items-center mt-16">
+    <div dir="ltr" className="w-full flex flex-col items-center mt-16">
       {/* Slider */}
       <div className="overflow-hidden w-full max-w-5xl" ref={emblaRef}>
         <div className="flex">
