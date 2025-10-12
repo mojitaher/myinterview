@@ -81,7 +81,7 @@ export default function Header() {
   overflow-hidden flex flex-col justify-center px-6 md:px-20"
     >
       {/* دکمه تغییر زبان */}
-      <div className="absolute top-5 right-25 sm:right-15 ">
+      <div className="xl:absolute lg:absolute md:absolute top-5 right-25 sm:right-15 ">
         <button
           onClick={() => toggleLang()}
           className="flex items-center gap-4 px-3 py-1 rounded-xl 
@@ -95,7 +95,7 @@ export default function Header() {
       </div>
 
       {/* دکمه تغییر تم */}
-      <div className="absolute top-5 left-25">
+      <div className="xl:absolute lg:absolute md:absolute top-5 left-25">
         <button
           onClick={toggleTheme}
           className="flex items-center gap-2 px-4 py-1 rounded-xl 
@@ -132,7 +132,7 @@ export default function Header() {
       </div>
 
       {/* لوگو */}
-      <div className="absolute top-6 left-6 w-12 h-12 z-50">
+      <div className="xl:absolute lg:absolute md:absolute absolute top-1 left-0 w-12 h-12 z-50">
         <Image
           src="/img/logo.png"
           alt="logo"

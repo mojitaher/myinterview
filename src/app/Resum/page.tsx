@@ -7,7 +7,7 @@ export default function Resume() {
   return (
     <>
       <div>
-        <div className="absolute top-5 left-25 sm:opacity-0 lg:opacity-100">
+        <div className="xl:absolute lg:absolute md:absolute top-5 left-25 sm:opacity-0 lg:opacity-100 ">
           <button
             onClick={toggleTheme}
             className="flex items-center gap-2 px-4 py-1 rounded-xl dark:bg-transparent bg-gray-200 border border-[#00e6d9] text-[#00e6d9] hover:bg-[#00e6d922] hover:shadow-[0_0_15px_#00e6d9] transition-all duration-300 select-none"
