@@ -82,7 +82,7 @@ export default function ProjectSilder() {
               <Image
                 src={slide.img}
                 alt={slide.title}
-                className={`object-cover transition-all duration-500 w-full h-[400px] ${
+                className={`object-cover transition-all duration-500 w-full lg:h-[400px] h-[300px] ${
                   slide.id - 1 == selectedIndex ? "hover:scale-125" : ""
                 }`}
               />

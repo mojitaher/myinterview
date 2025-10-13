@@ -20,7 +20,7 @@ export default function ProjectCard({ image, text, reverse }: props) {
   }, [inView]);
   return (
     <div
-      className={`flex justify-between items-center mt-[10%] gap-15 sm:flex-col  ${
+      className={`flex lg:flex-row md:flex-row justify-between items-center mt-[10%] gap-15 flex-col  ${
         reverse ? "lg:flex-row-reverse" : "lg:flex-row"
       }`}
       ref={ref}
@@ -30,7 +30,7 @@ export default function ProjectCard({ image, text, reverse }: props) {
           {text}
         </p>
       </div>
-      <div className="relative w-full h-[350px]">
+      <div className="relative w-full lg:h-[350px] md:h-[350px] h-[100px]">
         <Image
           src={image}
           alt="logo"
