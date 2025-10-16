@@ -17,8 +17,7 @@ export default function ToolsIcons() {
           <div
             key={index}
             className="
-    lg:p-5 md:p-4 p-2 rounded-full bg-white  hover:bg-gradient-to-r from-[#00D1FF99] via-[#0066FF99] to-[#00113399]
-    
+    lg:p-5 md:p-4 p-2 rounded-full bg-white  hover:bg-gradient-to-r from-[#00D1FF99] via-[#0066FF99] to-[#00113399] 
   "
           >
             <Image

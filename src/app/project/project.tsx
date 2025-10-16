@@ -1,5 +1,5 @@
 "use client";
-
+import { useInView } from "react-intersection-observer";
 import img1 from "../../../public/img/project (1).png";
 import img2 from "../../../public/img/project (2).png";
 import img3 from "../../../public/img/project (3).png";
@@ -27,9 +27,11 @@ export default function Projects() {
     <>
       <div
         id="projects"
-        className="mt-10 py-10 px-4 sm:px-6 md:px-8 dark:bg-gradient-to-b dark:from-[#001f1f] dark:via-[#000000] dark:to-[#001f1f] backdrop-blur-md dark:bg-white/5 dark:border dark:border-white/10 rounded-xl border border-[#3e3c3c] bg-gradient-to-r from-[#e0f7fa] via-[#f5fdff] to-[#ffffff]"
+        className={`mt-10 py-10 px-4 sm:px-6 md:px-8 dark:bg-gradient-to-b dark:from-[#001f1f] dark:via-[#000000] dark:to-[#001f1f] backdrop-blur-md dark:bg-white/5 dark:border dark:border-white/10 rounded-xl border border-[#3e3c3c] bg-gradient-to-r from-[#e0f7fa] via-[#f5fdff] to-[#ffffff]`}
       >
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div
+          className={`flex flex-col md:flex-row justify-between items-center `}
+        >
           <h1 className="text-3xl sm:text-4xl font-bold dark:text-[#00ffcc] drop-shadow-[0_0_10px_#00ffcc] p-4">
             {`${t("project")}(imdb)`}
           </h1>
@@ -74,6 +76,9 @@ export default function Projects() {
         <ProjectCard image={weatherImg2} text={weatherTxt2} reverse={true} />
         <ProjectCard image={weatherImg3} text={weatherTxt3} reverse={false} />
         <ProjectCard image={weatherImg4} text={weatherTxt4} reverse={true} />
+      </div>
+      <div className="relative my-10">
+        <div className="neon-line"></div>
       </div>
     </>
   );

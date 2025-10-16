@@ -10,7 +10,7 @@ export default function Aboutme() {
         {t("menuAbout")}
       </h1>
       <div className="flex flex-col lg:flex-row lg:justify-between lg:p-6 lg:gap-5 lg:items-center xl:flex-row xl:justify-between xl:p-6 xl:gap-5 xl:items-center md:flex-row md:justify-between md:p-6 md:gap-5 md:items-center dark:bg-gradient-to-b dark:from-[#001f1f] dark:via-[#000000] dark:to-[#001f1f] rounded-3xl border border-[#3e3c3c] bg-gradient-to-r from-[#e0f7fa] via-[#f5fdff] to-[#ffffff] sm:flex-col">
-        <p className="lg:text-4xl md:text-4xl text-xl font-bold text-[#444b52] leading-normal  ">
+        <p className="shine-text lg:text-4xl md:text-4xl text-xl font-bold text-[#444b52] leading-normal   ">
           {t("Aboutme")}
         </p>
 

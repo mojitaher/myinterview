@@ -20,9 +20,14 @@ export default function ProjectCard({ image, text, reverse }: props) {
   }, [inView]);
   return (
     <div
-      className={`flex lg:flex-row md:flex-row justify-between items-center mt-[10%] gap-15 flex-col  ${
+      className={`flex lg:flex-row md:flex-row justify-between items-center mt-[10%] gap-15 flex-col transform transition-all duration-700 ease-out ${
         reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-      }`}
+      }
+       ${
+         inView
+           ? "opacity-100 translate-y-0 scale-100"
+           : "opacity-0 translate-y-16 scale-95"
+       }`}
       ref={ref}
     >
       <div className="w-full text-center ">
