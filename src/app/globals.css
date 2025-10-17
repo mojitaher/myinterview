@@ -111,3 +111,28 @@ html {
     left: 100%;
   }
 }
+/* --- Neon Scrollbar --- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* زمینه‌ی پشت اسکرول */
+::-webkit-scrollbar-track {
+  background: #001f1f;
+  border-radius: 10px;
+}
+
+/* خود اسکرول */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ffcc, #00aa66);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  transition: all 0.3s ease;
+}
+
+/* وقتی موس روش می‌ره */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00ffaa, #00ffcc);
+  box-shadow: 0 0 20px #00ffaa, 0 0 40px #00ffaa;
+}
