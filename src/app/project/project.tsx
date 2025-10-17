@@ -1,5 +1,4 @@
 "use client";
-import { useInView } from "react-intersection-observer";
 import img1 from "../../../public/img/project (1).png";
 import img2 from "../../../public/img/project (2).png";
 import img3 from "../../../public/img/project (3).png";
